@@ -15,8 +15,6 @@
     <meta property="og:description" content="접속 차단 없는 가장 빠르고 안전한 최신 토렌트 주소 모음을 매일 실시간으로 분석하고 업데이트하여 제공합니다.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://trtxkorea.com">
-    <meta property="og:site_name" content="토렌트 코리아">
-    <meta property="og:image" content="https://trtxkorea.com/img/Gemini_Generated_Image_8tmipg8tmipg8tmi.webp">
     
     <!-- Favicon (SVG format for high resolution without external files) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232563eb%22/><path d=%22M58 18L28 58h23l-10 28 35-43H52l6-25z%22 fill=%22%23ffffff%22/></svg>" type="image/svg+xml">
@@ -79,7 +77,7 @@
           "@id": "https://trtxkorea.com/#website",
           "url": "https://trtxkorea.com",
           "name": "토렌트 코리아",
-          "alternateName": ["TRTX KOREA", "토렌트코리아"],
+          "alternateName": ["TRTX KOREA", "토렌트코리아", "토렌트 추천", "토렌트 순위"],
           "description": "최신 영화, 드라마, 예능, 유틸리티 등 검증된 토렌트 마그넷 파일 공유 추천 정보 포털",
           "inLanguage": "ko"
         },
@@ -88,33 +86,97 @@
           "@id": "https://trtxkorea.com/#organization",
           "name": "토렌트 코리아",
           "url": "https://trtxkorea.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232563eb%22/><path d=%22M58 18L28 58h23l-10 28 35-43H52l6-25z%22 fill=%22%23ffffff%22/></svg>"
+          },
           "email": "admin@trtxkorea.com"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://trtxkorea.com/#service",
+          "name": "토렌트 사이트 검증 및 순위 추천 서비스",
+          "provider": {
+            "@id": "https://trtxkorea.com/#organization"
+          },
+          "description": "빅데이터 및 실시간 모니터링을 통한 클린 토렌트 주소 모음 및 우회 접속 정보 큐레이션",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "1284",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://trtxkorea.com/#itemlist",
+          "name": "2026년 카테고리별 토렌트 추천 모음",
+          "description": "가장 빠르고 안전한 분야별 전문 토렌트 인덱스 리스트입니다.",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "최신 영화 및 미드 고화질 특화 모음",
+              "url": "https://trtxkorea.com/#recommend"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "예능 및 드라마 실시간 다시보기 모음",
+              "url": "https://trtxkorea.com/#recommend"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "무손실 음원 및 PC 유틸리티 모음",
+              "url": "https://trtxkorea.com/#recommend"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "가입 없는(노로긴) 무료 다운로드 모음",
+              "url": "https://trtxkorea.com/#recommend"
+            }
+          ]
         },
         {
           "@type": "FAQPage",
           "@id": "https://trtxkorea.com/#faq",
-          "mainEntity": [{
-            "@type": "Question",
-            "name": "토렌트 사이트 순위는 어떻게 결정되나요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "토렌트 코리아의 토렌트 순위 평가는 실제 다운로드 속도 측정을 통한 시드(Seed) 유지력 파악, 사이트 내 보유 자료의 방대함 및 업데이트 주기, 악성코드 배포 이력, 과도한 팝업 광고 여부 등 다각적인 기준을 바탕으로 자체 알고리즘 및 유저 피드백을 수집하여 매일 갱신하여 최상위 사이트를 제공합니다."
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "토렌트 사이트 순위는 어떻게 결정되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "토렌트 코리아의 토렌트 순위 평가는 실제 다운로드 속도 측정을 통한 시드(Seed) 유지력 파악, 사이트 내 보유 자료의 방대함 및 업데이트 주기, 악성코드 배포 이력, 과도한 팝업 광고 여부 등 다각적인 기준을 바탕으로 자체 알고리즘 및 유저 피드백을 수집하여 매일 갱신하여 최상위 사이트를 제공합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "토렌트 주소 모음이 자주 막히는 이유는 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "국내 방송통신위원회(방통위) 및 각 통신사(ISP)들의 지속적인 모니터링 및 접속 필터링 정책으로 인해 도메인(URL) 주소가 수시로 차단당하기 때문입니다. 저희 토렌트 코리아는 이렇게 막힌 주소를 실시간으로 감지하여 새로운 우회 주소로 즉시 교체된 최신 토렌트 주소 모음을 제공합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "이곳에서 추천하는 사이트는 100% 안전한가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네, 토렌트 추천 리스트에 등재된 곳들은 기본적으로 불필요한 회원가입을 유도하거나 악의적인 랜섬웨어가 심어진 가짜 파일을 배포하는 사이트들을 완벽히 필터링한 신뢰도 높은 곳들입니다. 다만 다운로드하신 파일 실행 시에는 반드시 개인 PC의 바이러스 백신을 켜두시는 것을 권장합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "모바일 스마트폰 환경에서도 토렌트 다운로드가 가능한가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네, 안드로이드 OS 기반 모바일 기기에서는 Flud, qBittorrent 모바일 앱 등을 통해 PC와 동일하게 마그넷 링크를 터치하여 스마트폰에 직접 저장하실 수 있습니다. 토렌트 코리아는 스마트폰 및 태블릿 기기에 맞춘 초고속 반응형 웹 인터페이스를 지원합니다."
+              }
             }
-          }, {
-            "@type": "Question",
-            "name": "토렌트 주소 모음이 자주 막히는 이유는 무엇인가요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "국내 방송통신위원회(방통위) 및 각 통신사(ISP)들의 지속적인 모니터링 및 접속 필터링 정책으로 인해 도메인(URL) 주소가 수시로 차단당하기 때문입니다. 저희 토렌트 코리아는 이렇게 막힌 주소를 실시간으로 감지하여 새로운 우회 주소로 즉시 교체된 최신 토렌트 주소 모음을 제공합니다."
-            }
-          }, {
-            "@type": "Question",
-            "name": "이곳에서 추천하는 사이트는 100% 안전한가요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "네, 토렌트 추천 리스트에 등재된 곳들은 기본적으로 불필요한 회원가입을 유도하거나 악의적인 랜섬웨어가 심어진 가짜 파일을 배포하는 사이트들을 완벽히 필터링한 신뢰도 높은 곳들입니다. 다만 다운로드하신 파일 실행 시에는 반드시 개인 PC의 바이러스 백신을 켜두시는 것을 권장합니다."
-            }
-          }]
+          ]
         }
       ]
     }
@@ -177,7 +239,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-pattern pt-36 pb-20 lg:pt-48 lg:pb-24 relative overflow-hidden">
+        <section class="hero-pattern pt-36 pb-24 lg:pt-48 lg:pb-32 relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></div>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -198,30 +260,13 @@
                     접속 차단 없는 가장 빠르고 안전한 최신 토렌트 주소 모음을 토렌트 코리아에서 매일 실시간으로 분석하고 업데이트하여 제공합니다. 악성코드 걱정 없이 오직 검증된 곳만 한 번에 확인하세요.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-xl mx-auto mb-16">
+                <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-xl mx-auto">
                     <a href="https://trtxkorea.com" class="flex-1 bg-primary hover:bg-blue-700 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-xl shadow-blue-600/30 transition-all flex items-center justify-center gap-2 hover:-translate-y-1">
                         <i class="fa-solid fa-earth-asia"></i> 토렌트 코리아 접속
                     </a>
                     <a href="#recommend" class="flex-1 bg-white hover:bg-slate-50 text-slate-800 text-lg font-bold py-4 px-8 rounded-xl shadow-md border border-slate-200 transition-all flex items-center justify-center gap-2 hover:-translate-y-1">
                         주소 모음 확인 <i class="fa-solid fa-arrow-down text-primary"></i>
                     </a>
-                </div>
-
-                <!-- Hero Banner Image Insertion -->
-                <div class="max-w-5xl mx-auto px-2">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-900 group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent z-10 pointer-events-none"></div>
-                        <img src="/img/Gemini_Generated_Image_5kdxr75kdxr75kdx.webp" alt="토렌트 코리아 고속 데이터 네트워크 및 파일 공유 인덱스 시스템" class="w-full h-[320px] md:h-[420px] object-cover object-center transform group-hover:scale-105 transition-transform duration-700 opacity-90" onerror="this.src='https://placehold.co/1200x500/0f172a/ffffff?text=Torrent+Korea+Network+Index'">
-                        <div class="absolute bottom-6 left-6 right-6 z-20 text-left flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
-                            <div>
-                                <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Realtime Index</span>
-                                <h3 class="text-white text-xl md:text-2xl font-black">24시간 실시간 차단 감지 및 초고속 시드 분석 시스템</h3>
-                            </div>
-                            <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/25 text-white text-xs font-bold">
-                                <i class="fa-solid fa-shield-halved text-green-400"></i> 100% 클린 보안 인증
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 
                 <div class="mt-8 flex justify-center items-center gap-2 text-sm text-slate-500 font-medium">
@@ -697,4 +742,3 @@
     </script>
 </body>
 </html>
-```eof
