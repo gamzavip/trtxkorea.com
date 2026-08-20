@@ -291,53 +291,16 @@
     </main>
 
     <!-- Semantic Footer (Same as other pages) -->
-    <footer class="bg-dark text-slate-400 py-16 mt-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
-                <div class="md:col-span-5">
-                    <div class="flex items-center gap-2 mb-6 text-white">
-                        <i class="fa-solid fa-bolt text-primary text-2xl"></i>
-                        <span class="font-black text-2xl tracking-tight">토렌트 <span class="text-primary">코리아</span></span>
-                    </div>
-                    <p class="text-sm leading-relaxed mb-4 pr-4">
-                        대한민국 파일 공유 정보 포털 토렌트 코리아. 검증된 토렌트 사이트 순위 정보 및 유익한 디지털 컨텐츠 마그넷 정보 메타 센터입니다.
-                    </p>
-                    <p class="text-sm font-bold text-slate-300">
-                        공식 도메인: <a href="https://trtxkorea.com" class="text-primary hover:underline">trtxkorea.com</a>
-                    </p>
-                </div>
-                
-                <div class="md:col-span-3 md:col-start-7">
-                    <h5 class="text-white font-bold mb-4">주요 카테고리</h5>
-                    <ul class="space-y-3 text-sm font-medium">
-                        <li><a href="/#recommend" class="hover:text-primary transition">최신 영화 토렌트 순위</a></li>
-                        <li><a href="/#recommend" class="hover:text-primary transition">드라마/예능 파일공유 추천</a></li>
-                        <li><a href="/#recommend" class="hover:text-primary transition">유틸리티 프로그램 정보</a></li>
-                    </ul>
-                </div>
-                
-                <div class="md:col-span-3">
-                    <h5 class="text-white font-bold mb-4">고객지원 & 정보</h5>
-                    <ul class="space-y-3 text-sm font-medium">
-                        <li><a href="/blog" class="text-primary transition">토렌트 사용법 가이드</a></li>
-                        <li><a href="/#faq" class="hover:text-primary transition">자주 묻는 질문 (FAQ)</a></li>
-                        <li><a href="#" class="hover:text-primary transition">DMCA / 저작권 문의</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-slate-800 pt-8 mt-8">
-                <h6 class="text-white font-bold mb-3 text-sm">[면책 조항 / Legal Disclaimer]</h6>
-                <p class="text-xs leading-relaxed text-slate-500 mb-6 text-justify">
-                    토렌트 코리아 (trtxkorea.com) 메타 안내 랜딩 페이지는 웹상에 공개적으로 돌아다니는 정보(하이퍼링크 및 URL)를 수집하여 제공하는 링크 모음 사이트 및 파일 공유 정보 포털입니다. 본 웹 서버에는 저작권의 보호를 받는 어떠한 불법적인 미디어 파일, 영상, 파일 조각, 시드(Seed) 파일 혹은 토렌트 파일(.torrent)도 직접 호스팅하거나 업로드/배포하지 않으며 모든 링크는 외부 웹사이트의 메타 데이터 정보 연결만을 제공합니다. 링크된 타 사이트에서 발생하는 저작권 침해 등 모든 법적 책임은 해당 사이트 운영자 및 사용자 본인에게 있으며, 토렌트 코리아는 이에 대해 어떠한 민/형사상 법적 책임도 지지 않음을 명시합니다. 불법 자료의 공유 및 유포는 관련 법령에 의거하여 처벌받을 수 있습니다.
-                </p>
-                <div class="flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-6">
-                    <p>© 2026 토렌트 코리아 (Torrent Korea). All rights reserved.</p>
-                    <p class="mt-2 md:mt-0">Contact: admin@trtxkorea.com</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+     <div id="footer-placeholder"></div>
+    <script>
+    // footer.html 파일을 불러와서 footer-placeholder 안에 넣는 코드
+    fetch('/blog/footer/')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('푸터를 불러오는 중 에러 발생:', error));
+</script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
