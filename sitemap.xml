@@ -1,44 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- 메인 페이지 (가장 중요, 매일 크롤링 유도) -->
-  <url>
-    <loc>https://trtxkorea.com/</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- 블로그 메인 페이지 (목록) -->
-  <url>
-    <loc>https://trtxkorea.com/blog/</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- 블로그 게시글 1: qBittorrent 최적화 가이드 -->
-  <url>
-    <loc>https://trtxkorea.com/blog/qbittorrent-optimization-guide</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- 블로그 게시글 2: VPN 추천 -->
-  <url>
-    <loc>https://trtxkorea.com/blog/safe-vpn-recommendations</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- 블로그 게시글 3: 가짜 악성코드 사이트 경고 -->
-  <url>
-    <loc>https://trtxkorea.com/blog/fake-malware-sites-warning</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+<url>
+<loc>https://trtxkorea.com/</loc>
+<lastmod>2026-08-21T13:16:15+09:00</lastmod>
+</url>
+<url>
+<loc>https://trtxkorea.com/blog/</loc>
+<lastmod>2026-08-20T21:31:43+09:00</lastmod>
+</url>
+<url>
+<loc>https://trtxkorea.com/blog/fake-malware-sites-warning</loc>
+<lastmod>2026-08-20T21:33:38+09:00</lastmod>
+</url>
+<url>
+<loc>https://trtxkorea.com/blog/footer</loc>
+<lastmod>2026-08-20T21:30:37+09:00</lastmod>
+</url>
+<url>
+<loc>https://trtxkorea.com/blog/qbittorrent-optimization-guide</loc>
+<lastmod>2026-08-20T21:33:58+09:00</lastmod>
+</url>
+<url>
+<loc>https://trtxkorea.com/blog/safe-vpn-recommendations</loc>
+<lastmod>2026-08-20T21:34:18+09:00</lastmod>
+</url>
 </urlset>
