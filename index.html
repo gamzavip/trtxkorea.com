@@ -2,709 +2,585 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Titles and Descriptions -->
-    <title>토렌트 코리아 - 2026 실시간 토렌트 사이트 순위 및 추천 모음</title>
-    <meta name="description" content="최신 영화, 드라마, 예능, 유틸리티 등 검증된 토렌트 마그넷 파일 공유 추천 정보를 빠르고 안전하게 제공하는 대한민국 대표 포털 토렌트 코리아입니다. 접속 차단 없는 2026년 최신 공식 주소를 확인하세요.">
-    <meta name="keywords" content="토렌트, 토렌트 사이트, 토렌트 순위, 토렌트 추천, 토렌트 주소 모음, 토렌트 코리아, 영화 토렌트, 드라마 토렌트, 예능 다시보기, 파일공유">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://trtxkorea.com">
+    <title>토렌트 코리아 TORRENTKOREA | 대한민국 1등 미디어</title>
     
-    <!-- Open Graph for Social Sharing -->
-    <meta property="og:title" content="토렌트 코리아 - 2026 실시간 토렌트 사이트 순위 및 추천">
-    <meta property="og:description" content="접속 차단 없는 가장 빠르고 안전한 최신 토렌트 주소 모음을 매일 실시간으로 분석하고 업데이트하여 제공합니다.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://trtxkorea.com">
+    <!-- Meta SEO -->
+    <meta name="description" content="안전하고 쾌적한 최신 영화, 드라마, 예능, 넷플릭스, 애니메이션 큐레이션 및 인덱스 정보 포털 토렌트 코리아">
+    <meta name="keywords" content="토렌트, 최신영화, 넷플릭스, 드라마, 애니메이션, 실시간TV, 파일공유, 보안인덱스, 토렌트코리아">
     
-    <!-- Favicon (SVG format for high resolution without external files) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232563eb%22/><path d=%22M58 18L28 58h23l-10 28 35-43H52l6-25z%22 fill=%22%23ffffff%22/></svg>" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232563eb%22/><path d=%22M58 18L28 58h23l-10 28 35-43H52l6-25z%22 fill=%22%23ffffff%22/></svg>">
-    
-    <!-- Fonts: Noto Sans KR for optimal Korean rendering -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome for standard Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS (CDN for single file deployment) -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['"Noto Sans KR"', 'sans-serif'],
-                    },
                     colors: {
-                        primary: '#2563eb', // blue-600
-                        secondary: '#3b82f6', // blue-500
-                        dark: '#0f172a', // slate-900
-                        light: '#f8fafc', // slate-50
+                        primary: '#2563eb', // 메인 블루
+                        danger: '#ef4444',  // 포인트 레드
+                        dark: '#0f172a',
                     }
                 }
             }
         }
     </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
-        /* Custom CSS for smooth scrolling and decorative effects */
-        html { scroll-behavior: smooth; }
-        .gradient-text {
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero-pattern {
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #f8fafc;
-            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
-            background-size: 20px 20px;
+            color: #0f172a;
         }
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
+
+        .line-clamp-1 { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        
+        .scrollbar-none::-webkit-scrollbar { display: none; }
+        .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* 좌우 플로팅 윙 배너 (데스크톱 전용) */
+        .wing-banner { position: fixed; top: 150px; width: 120px; z-index: 40; display: none; }
+        @media (min-width: 1400px) {
+            .wing-left { display: block; left: max(10px, calc(50% - 780px)); }
+            .wing-right { display: block; right: max(10px, calc(50% - 780px)); }
         }
     </style>
 
-    <!-- Professional SEO Structured Data (JSON-LD) -->
-   <script type="application/ld+json">
+    <!-- 전문가용 통합 JSON-LD 구조화 데이터 -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "WebSite",
           "@id": "https://trtxkorea.com/#website",
-          "url": "https://trtxkorea.com",
+          "url": "https://trtxkorea.com/",
           "name": "토렌트 코리아",
-          "alternateName": ["TRTX KOREA", "토렌트코리아", "토렌트 추천", "토렌트 순위"],
-          "description": "최신 영화, 드라마, 예능, 유틸리티 등 검증된 토렌트 마그넷 파일 공유 추천 정보 포털",
-          "inLanguage": "ko"
+          "description": "대한민국 1등 미디어 & 파일 인덱스 포털",
+          "datePublished": "2026-04-01T00:00:00+09:00",
+          "dateModified": "2026-08-31T15:00:00+09:00",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://trtxkorea.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          },
+          "inLanguage": "ko-KR"
         },
         {
           "@type": "Organization",
           "@id": "https://trtxkorea.com/#organization",
           "name": "토렌트 코리아",
-          "url": "https://trtxkorea.com",
+          "url": "https://trtxkorea.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232563eb%22/><path d=%22M58 18L28 58h23l-10 28 35-43H52l6-25z%22 fill=%22%23ffffff%22/></svg>"
+            "url": "https://placehold.co/512x512/2563eb/ffffff?text=TK"
           },
-          "email": "admin@trtxkorea.com"
-        },
-        {
-          "@type": "Service",
-          "@id": "https://trtxkorea.com/#service",
-          "name": "토렌트 사이트 검증 및 순위 추천 서비스",
-          "provider": {
-            "@id": "https://trtxkorea.com/#organization"
-          },
-          "description": "빅데이터 및 실시간 모니터링을 통한 클린 토렌트 주소 모음 및 우회 접속 정보 큐레이션"
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://trtxkorea.com/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "토렌트 사이트 순위는 어떻게 결정되나요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "토렌트 코리아의 토렌트 순위 평가는 실제 다운로드 속도 측정을 통한 시드(Seed) 유지력 파악, 사이트 내 보유 자료의 방대함 및 업데이트 주기, 악성코드 배포 이력, 과도한 팝업 광고 여부 등 다각적인 기준을 바탕으로 자체 알고리즘 및 유저 피드백을 수집하여 매일 갱신하여 최상위 사이트를 제공합니다."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "토렌트 주소 모음이 자주 막히는 이유는 무엇인가요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "국내 방송통신위원회(방통위) 및 각 통신사(ISP)들의 지속적인 모니터링 및 접속 필터링 정책으로 인해 도메인(URL) 주소가 수시로 차단당하기 때문입니다. 저희 토렌트 코리아는 이렇게 막힌 주소를 실시간으로 감지하여 새로운 우회 주소로 즉시 교체된 최신 토렌트 주소 모음을 제공합니다."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "이곳에서 추천하는 사이트는 100% 안전한가요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "네, 토렌트 추천 리스트에 등재된 곳들은 기본적으로 불필요한 회원가입을 유도하거나 악의적인 랜섬웨어가 심어진 가짜 파일을 배포하는 사이트들을 완벽히 필터링한 신뢰도 높은 곳들입니다. 다만 다운로드하신 파일 실행 시에는 반드시 개인 PC의 바이러스 백신을 켜두시는 것을 권장합니다."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "모바일 스마트폰 환경에서도 토렌트 다운로드가 가능한가요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "네, 안드로이드 OS 기반 모바일 기기에서는 Flud, qBittorrent 모바일 앱 등을 통해 PC와 동일하게 마그넷 링크를 터치하여 스마트폰에 직접 저장하실 수 있습니다. 토렌트 코리아는 스마트폰 및 태블릿 기기에 맞춘 초고속 반응형 웹 인터페이스를 지원합니다."
-              }
-            }
+          "sameAs": [
+            "https://t.me/gamza79"
           ]
         }
       ]
     }
     </script>
 </head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white">
 
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-primary selection:text-white">
-    
-    <!-- Header / Navigation -->
-    <header class="fixed top-0 w-full glass-nav border-b border-slate-200 z-50 transition-all duration-300" id="main-nav">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 md:h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="flex items-center gap-2 group">
-                        <div class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform shadow-md shadow-blue-500/30">
-                            <i class="fa-solid fa-bolt text-xl"></i>
-                        </div>
-                        <span class="font-black text-2xl tracking-tight text-dark">토렌트 <span class="text-primary">코리아</span></span>
-                    </a>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-slate-600 hover:text-primary font-bold text-sm transition-colors">소개</a>
-                    <a href="#categories" class="text-slate-600 hover:text-primary font-bold text-sm transition-colors">토렌트 추천</a>
-                    <a href="#recommend" class="text-slate-600 hover:text-primary font-bold text-sm transition-colors">주소 모음</a>
-                    <a href="#reviews" class="text-slate-600 hover:text-primary font-bold text-sm transition-colors">이용후기</a>
-                    <a href="/blog" class="text-slate-600 hover:text-primary font-bold text-sm transition-colors">블로그</a>
-                    <a href="#faq" class="text-slate-600 hover:text-primary font-bold text-sm transition-colors">FAQ</a>
-                </nav>
-                
-                <!-- CTA Button (Desktop) -->
-                <div class="hidden md:flex">
-                    <a href="#final-cta" class="bg-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
-                        공식 사이트 접속 <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none p-2 rounded-lg bg-slate-100">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
+    <!-- [0] 사이트 개편 안내 팝업 -->
+    <div id="revampPopup" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 overflow-hidden transform transition-transform scale-100">
+            <div class="bg-primary p-4 flex justify-between items-center text-white">
+                <h2 class="font-bold text-lg flex items-center gap-2">
+                    <i data-lucide="wrench" class="w-5 h-5"></i> 사이트 리뉴얼 안내
+                </h2>
+                <button id="closePopupIcon" class="hover:text-blue-200 transition-colors focus:outline-none">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
             </div>
-        </div>
-        
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 absolute w-full shadow-xl">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#about" class="block px-3 py-3 text-base font-bold text-slate-700 hover:text-primary hover:bg-blue-50 rounded-lg">소개</a>
-                <a href="#categories" class="block px-3 py-3 text-base font-bold text-slate-700 hover:text-primary hover:bg-blue-50 rounded-lg">토렌트 추천</a>
-                <a href="#recommend" class="block px-3 py-3 text-base font-bold text-slate-700 hover:text-primary hover:bg-blue-50 rounded-lg">주소 모음</a>
-                <a href="#reviews" class="block px-3 py-3 text-base font-bold text-slate-700 hover:text-primary hover:bg-blue-50 rounded-lg">이용후기</a>
-                <a href="/blog" class="block px-3 py-3 text-base font-bold text-slate-700 hover:text-primary hover:bg-blue-50 rounded-lg">블로그</a>
-                <a href="#faq" class="block px-3 py-3 text-base font-bold text-slate-700 hover:text-primary hover:bg-blue-50 rounded-lg">FAQ</a>
-                <a href="#final-cta" class="block w-full text-center mt-4 bg-primary text-white px-5 py-4 rounded-lg font-bold shadow-md">공식 사이트 접속하기</a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-pattern pt-36 pb-24 lg:pt-48 lg:pb-32 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/40 to-transparent pointer-events-none"></div>
-            
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-800 font-bold text-xs sm:text-sm mb-8 border border-blue-200 shadow-sm">
-                    <span class="relative flex h-2.5 w-2.5">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
-                    </span>
-                    2026년 최신 DB 실시간 업데이트 완료
+            <div class="p-6 text-center space-y-4">
+                <div class="w-16 h-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-2 shadow-inner">
+                    <i data-lucide="rocket" class="w-8 h-8"></i>
                 </div>
-                
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-dark mb-6 leading-[1.2] tracking-tight">
-                    대한민국 1등 파일 공유 <br class="hidden sm:block">
-                    <span class="bg-gradient-to-r from-primary to-cyan-500 gradient-text">토렌트 사이트 순위 & 추천</span>
-                </h1>
-                
-                <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
-                    접속 차단 없는 가장 빠르고 안전한 최신 토렌트 주소 모음을 토렌트 코리아에서 매일 실시간으로 분석하고 업데이트하여 제공합니다. 악성코드 걱정 없이 오직 검증된 곳만 한 번에 확인하세요.
+                <h3 class="text-xl font-black text-slate-800 tracking-tight">더 나은 서비스로<br>찾아뵙겠습니다!</h3>
+                <p class="text-[13px] text-slate-600 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">
+                    현재 토렌트 코리아는 사용자 여러분께 더욱 쾌적하고 빠른 환경을 제공하기 위해 <strong>대규모 사이트 리뉴얼 작업</strong>을 진행하고 있습니다.<br><br>
+                    작업 기간 동안 일부 기능 접속이 불안정할 수 있으니 너른 양해 부탁드립니다.
                 </p>
-                
-                <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-xl mx-auto mb-16">
-                    <a href="#final-cta" class="flex-1 bg-primary hover:bg-blue-700 text-white text-lg font-bold py-4 px-8 rounded-xl shadow-xl shadow-blue-600/30 transition-all flex items-center justify-center gap-2 hover:-translate-y-1">
-                        <i class="fa-solid fa-earth-asia"></i> 토렌트 코리아 접속
-                    </a>
-                    <a href="#recommend" class="flex-1 bg-white hover:bg-slate-50 text-slate-800 text-lg font-bold py-4 px-8 rounded-xl shadow-md border border-slate-200 transition-all flex items-center justify-center gap-2 hover:-translate-y-1">
-                        주소 모음 확인 <i class="fa-solid fa-arrow-down text-primary"></i>
-                    </a>
-                </div>
-
-                <!-- Hero Banner Image Insertion -->
-                    <i class="fa-solid fa-circle-check text-green-500"></i>
-                    공식 도메인 <span class="font-bold text-slate-700">trtxkorea.com</span>을 통해서만 안전하게 서비스됩니다.
-                </div>
+                <button id="closePopupBtn" class="mt-2 w-full bg-slate-900 hover:bg-primary text-white font-bold py-3.5 rounded-xl transition-colors focus:outline-none shadow-lg shadow-slate-900/20">
+                    확인했습니다
+                </button>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Core Categories Section -->
-        <section id="categories" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">RECOMMENDED FILE SHARING</h2>
-                    <h3 class="text-3xl font-bold text-dark mb-4">최신 미디어 카테고리별 실시간 인덱스</h3>
-                    <p class="text-slate-600 max-w-2xl mx-auto font-medium">데이터 다운로드 속도, 시더(Seeder) 수, 악성 파일 유무를 다각도로 평가하여 최적의 추천 리스트를 제공합니다.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Feature 1 -->
-                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
-                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                            <i class="fa-solid fa-tv text-2xl text-primary group-hover:text-white transition-colors"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-dark mb-3">TV 방송 / 예능</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">지상파, 종편, 케이블 인기 방송 프로그램을 본방송 종료 후 즉시 검색 및 파일 공유할 수 있는 메타 데이터 추천.</p>
-                        <ul class="text-xs space-y-2 text-slate-500 font-medium">
-                            <li><i class="fa-solid fa-check text-primary mr-1"></i> 초고화질 1080p/4K 지원</li>
-                            <li><i class="fa-solid fa-check text-primary mr-1"></i> 실시간 업로드 시더 확보</li>
-                        </ul>
-                    </div>
+    <!-- [좌/우측 플로팅 윙 배너] -->
+    <div class="wing-banner wing-left space-y-2">
+        <a href="#" class="block bg-white border border-slate-200 shadow-sm hover:border-primary transition p-1 rounded">
+            <img src="https://placehold.co/110x300/e2e8f0/64748b?text=Left+Wing+1" alt="좌측배너1" class="w-full h-auto rounded-sm">
+        </a>
+        <a href="#" class="block bg-white border border-slate-200 shadow-sm hover:border-primary transition p-1 rounded">
+            <img src="https://placehold.co/110x300/e2e8f0/64748b?text=Left+Wing+2" alt="좌측배너2" class="w-full h-auto rounded-sm">
+        </a>
+    </div>
+    <div class="wing-banner wing-right space-y-2">
+        <a href="#" class="block bg-white border border-slate-200 shadow-sm hover:border-primary transition p-1 rounded">
+            <img src="https://placehold.co/110x300/e2e8f0/64748b?text=Right+Wing+1" alt="우측배너1" class="w-full h-auto rounded-sm">
+        </a>
+        <a href="#" class="block bg-white border border-slate-200 shadow-sm hover:border-primary transition p-1 rounded">
+            <img src="https://placehold.co/110x300/e2e8f0/64748b?text=Right+Wing+2" alt="우측배너2" class="w-full h-auto rounded-sm">
+        </a>
+    </div>
 
-                    <!-- Feature 2 -->
-                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
-                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                            <i class="fa-solid fa-film text-2xl text-primary group-hover:text-white transition-colors"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-dark mb-3">최신 개봉 영화</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">최신 극장 개봉작 정보, 무손실 음향 및 한글 자막이 통합된 고품질 파일 공유 정보 추천 포털.</p>
-                        <ul class="text-xs space-y-2 text-slate-500 font-medium">
-                            <li><i class="fa-solid fa-check text-primary mr-1"></i> 무손실 음향(DTS/Dolby)</li>
-                            <li><i class="fa-solid fa-check text-primary mr-1"></i> 한글 자막 내장 파일 인덱스</li>
-                        </ul>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
-                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                            <i class="fa-solid fa-compact-disc text-2xl text-primary group-hover:text-white transition-colors"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-dark mb-3">신작 애니메이션</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">분기별 신작 애니메이션, 완결작, 고화질 극장판, 고품질 한글 자막 파일 등 덕후들을 위한 완벽한 제공.</p>
-                        <ul class="text-xs space-y-2 text-slate-500 font-medium">
-                            <li><i class="fa-solid fa-check text-primary mr-1"></i> 분기별 신작 완벽 정리</li>
-                            <li><i class="fa-solid fa-check text-primary mr-1"></i> 고품질 자막 완비</li>
-                        </ul>
-                    </div>
-
-                    <!-- Feature 4 -->
-                    <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
-                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                            <i class="fa-solid fa-laptop-code text-2xl text-primary group-hover:text-white transition-colors"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-dark mb-3">유틸리티 & 프로그램</h4>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-6">시스템 최적화 도구, 오픈소스 소프트웨어 및 안전성 검증 조치를 거친 파일 공유 가이드.</p>
-                        <ul class="text-xs space-y-2 text-slate-500 font-medium">
-                            <li><i class="fa-solid fa-check text-primary mr-1"></i> 악성코드 사전 검사 검증</li>
-                            <li><i class="fa-solid fa-check text-primary mr-1"></i> 포터블/무설치 모음</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us / Principles Section -->
-        <section id="about" class="py-24 bg-slate-900 text-white relative overflow-hidden">
-            <!-- Decorative BG -->
-            <div class="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-primary/20 blur-[100px]"></div>
-            
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="flex flex-col lg:flex-row gap-16 lg:items-center">
-                    <!-- Left text -->
-                    <div class="lg:w-1/2">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">왜 토렌트 코리아를 <br>선택해야 할까요?</h2>
-                        <div class="space-y-5 text-slate-300 font-medium leading-relaxed">
-                            <p>
-                                매일같이 수십 개의 사이트가 생겨나고 또 방송통신위원회의 차단으로 사라집니다. 이로 인해 유저들은 매번 구글을 검색하며 새로운 주소를 찾아 헤매는 불편함을 겪고 있습니다. 토렌트 코리아는 이러한 불편함을 완벽하게 해소해 드립니다.
-                            </p>
-                            <p>
-                                단순한 링크 나열을 넘어, 자체 개발한 모니터링 시스템을 통해 하루에도 수차례 각 사이트의 생존 여부를 확인합니다. 죽은 링크는 즉각 삭제하고 새로운 우회 접속 주소를 신속하게 반영하여 완벽한 토렌트 추천 서비스를 실현합니다.
-                            </p>
-                            <p>
-                                또한 과도한 팝업 광고, 가짜 다운로드 버튼으로 위장한 악성코드 배포 사이트를 사전에 필터링하여 유저분들의 PC와 모바일 환경을 안전하게 지키는 것을 최우선 가치로 삼고 있습니다.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Right Principles Box -->
-                    <div class="lg:w-1/2 w-full">
-                        <div class="bg-slate-800/50 backdrop-blur-md rounded-3xl p-8 md:p-10 border border-slate-700 shadow-2xl">
-                            <div class="inline-block bg-primary/20 text-blue-400 font-bold px-3 py-1 rounded-full text-xs mb-4">신뢰도 100% 검증 프로세스</div>
-                            <h3 class="text-2xl font-bold mb-8">토렌트 코리아의 3대 추천 원칙</h3>
-                            
-                            <div class="space-y-8">
-                                <div class="flex gap-5">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-primary flex items-center justify-center font-black text-xl shadow-lg shadow-blue-500/50">1</div>
-                                    <div>
-                                        <h4 class="font-bold text-lg mb-1">실시간 자동화 크로스 체크</h4>
-                                        <p class="text-slate-400 text-sm leading-relaxed">자동화 봇을 통해 매일 오전 6시, 12시 접속 상태를 2회 크로스 체크하여 죽은 링크를 선별하고 즉시 우회 주소로 대체합니다.</p>
-                                    </div>
-                                </div>
-                                <div class="flex gap-5">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-primary flex items-center justify-center font-black text-xl shadow-lg shadow-blue-500/50">2</div>
-                                    <div>
-                                        <h4 class="font-bold text-lg mb-1">클린 환경 까다로운 심사</h4>
-                                        <p class="text-slate-400 text-sm leading-relaxed">눈속임용 다운로드 버튼이나 악의적인 랜섬웨어, 무분별한 팝업 창이 뜨지 않는 곳만 까다롭게 심사하여 소개합니다.</p>
-                                    </div>
-                                </div>
-                                <div class="flex gap-5">
-                                    <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-primary flex items-center justify-center font-black text-xl shadow-lg shadow-blue-500/50">3</div>
-                                    <div>
-                                        <h4 class="font-bold text-lg mb-1">전문성 기반 카테고리 분류</h4>
-                                        <p class="text-slate-400 text-sm leading-relaxed">최신 영화, 종영 드라마, 인기 예능, 고화질 애니메이션 등 사용자 니즈에 맞춘 카테고리별 전문성을 평가하여 분류합니다.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Torrent Collections Section -->
-        <section id="recommend" class="py-20 bg-slate-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-dark mb-4">카테고리별 토렌트 주소 모음</h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto font-medium">목적에 맞는 링크 모음을 클릭하여 가장 빠르고 확실한 순위표로 이동하세요.<br>모든 링크는 방금 전 업데이트 되었습니다.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Link 1 -->
-                    <div class="group flex items-center bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary transition-all duration-300">
-                        <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-3xl mr-6 group-hover:scale-110 group-hover:bg-blue-50 transition-all">🎬</div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-dark group-hover:text-primary transition-colors">영화/미드 특화 모음</h3>
-                            <p class="text-slate-500 text-sm mt-1">넷플릭스, 디즈니플러스 고화질 자료 포진</p>
-                        </div>
-                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- Link 2 -->
-                    <div class="group flex items-center bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary transition-all duration-300">
-                        <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-3xl mr-6 group-hover:scale-110 group-hover:bg-blue-50 transition-all">📺</div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-dark group-hover:text-primary transition-colors">예능/드라마 다시보기 모음</h3>
-                            <p class="text-slate-500 text-sm mt-1">방영 종료 후 5분 이내 초고속 업로드 사이트</p>
-                        </div>
-                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                    </div>
-
-                    <!-- Link 3 -->
-                    <div class="group flex items-center bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary transition-all duration-300">
-                        <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-3xl mr-6 group-hover:scale-110 group-hover:bg-blue-50 transition-all">🎧</div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-dark group-hover:text-primary transition-colors">무손실 음원/유틸리티 모음</h3>
-                            <p class="text-slate-500 text-sm mt-1">FLAC 음원 및 필수 PC 소프트웨어 보관소</p>
-                        </div>
-                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                    </div>
-
-                    <!-- Link 4 -->
-                    <div class="group flex items-center bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary transition-all duration-300">
-                        <div class="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center text-3xl mr-6 group-hover:scale-110 group-hover:bg-blue-50 transition-all">🔓</div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-dark group-hover:text-primary transition-colors">노로긴(가입無) 무료 모음</h3>
-                            <p class="text-slate-500 text-sm mt-1">번거로운 가입 절차 없이 즉시 다운로드 가능한 곳</p>
-                        </div>
-                        <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Bookmark Tip -->
-                <div class="mt-12 bg-blue-50 border border-blue-200 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-center gap-4 shadow-inner">
-                    <div class="bg-primary text-white text-sm font-bold px-3 py-1.5 rounded-lg flex items-center gap-2">
-                        <i class="fa-solid fa-lightbulb text-yellow-300"></i> 꿀팁
-                    </div>
-                    <p class="text-slate-800 font-medium text-center md:text-left">
-                        현재 페이지를 <strong class="text-primary">북마크(Ctrl+D)</strong> 해두세요! 정부 규제로 즐겨찾기가 막히더라도 언제나 변경된 최신 주소를 바로 확인할 수 있습니다.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Beginner Guide Section -->
-        <section class="py-20 bg-white border-t border-slate-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">BEGINNER GUIDE</h2>
-                    <h3 class="text-3xl font-bold text-dark mb-4">토렌트 다운로드 초보자 이용 안내</h3>
-                    <p class="text-slate-600">쉽고 빠르게 토렌트 마그넷 파일 공유를 시작하는 3단계</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative">
-                    <!-- Connector line -->
-                    <div class="hidden md:block absolute top-[50px] left-[15%] right-[15%] h-[2px] bg-slate-100 z-0"></div>
-                    
-                    <!-- Step 1 -->
-                    <div class="relative z-10 bg-white pt-6">
-                        <div class="w-20 h-20 bg-white rounded-full border-4 border-slate-100 mx-auto flex items-center justify-center mb-6 shadow-md text-2xl font-black text-primary">1</div>
-                        <h4 class="text-xl font-bold mb-3 text-dark">클라이언트 프로그램 설치</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed px-4">qBittorrent 등 오픈소스 기반의 신뢰할 수 있는 무료 토렌트 다운로드 프로그램을 공식 홈페이지에서 다운로드하여 설치합니다.</p>
-                    </div>
-                    
-                    <!-- Step 2 -->
-                    <div class="relative z-10 bg-white pt-6">
-                        <div class="w-20 h-20 bg-white rounded-full border-4 border-slate-100 mx-auto flex items-center justify-center mb-6 shadow-md text-2xl font-black text-primary">2</div>
-                        <h4 class="text-xl font-bold mb-3 text-dark">마그넷(Magnet) 클릭</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed px-4">토렌트 코리아 웹사이트에서 원하는 자료 항목을 선택한 후 자석 모양의 마그넷 링크 아이콘을 클릭하여 클라이언트를 연동합니다.</p>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="relative z-10 bg-white pt-6">
-                        <div class="w-20 h-20 bg-primary rounded-full border-4 border-blue-100 mx-auto flex items-center justify-center mb-6 shadow-xl shadow-blue-200 text-2xl font-black text-white">3</div>
-                        <h4 class="text-xl font-bold mb-3 text-dark">다운로드 완료</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed px-4">클라이언트에서 다운로드 저장 경로를 지정하면 P2P 피어 연결을 통해 자동으로 높은 속도로 데이터 전송이 진행됩니다.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reviews Section -->
-        <section id="reviews" class="py-24 bg-slate-50 border-t border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-dark mb-4">토렌트 코리아 생생 이용 후기</h2>
-                    <p class="text-slate-600">저희가 제공하는 순위와 추천 모음을 이용하시는 분들의 리뷰입니다.</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Review 1 -->
-                    <article class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative hover:-translate-y-1 transition-transform">
-                        <i class="fa-solid fa-quote-left text-4xl text-slate-100 absolute top-6 left-6"></i>
-                        <div class="relative z-10">
-                            <div class="flex text-yellow-400 text-sm mb-5">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="text-slate-700 font-medium leading-relaxed mb-8 h-32 overflow-hidden">
-                                "맨날 즐겨찾기 해둔 사이트들이 며칠 지나면 막혀버려서 구글에서 '토렌트 추천' 검색하느라 시간 다 보냈는데, 토렌트 코리아 알고 나서는 즐겨찾기 하나로 종결입니다. 정말 업데이트가 빠릅니다."
-                            </p>
-                            <div class="flex items-center gap-3 pt-5 border-t border-slate-100">
-                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary font-bold">김</div>
-                                <div>
-                                    <h4 class="font-bold text-dark text-sm">김*수</h4>
-                                    <p class="text-xs text-slate-500">일반 사용자 • 2026. 07. 방문</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Review 2 -->
-                    <article class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative hover:-translate-y-1 transition-transform">
-                        <i class="fa-solid fa-quote-left text-4xl text-slate-100 absolute top-6 left-6"></i>
-                        <div class="relative z-10">
-                            <div class="flex text-yellow-400 text-sm mb-5">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="text-slate-700 font-medium leading-relaxed mb-8 h-32 overflow-hidden">
-                                "주소 복사 기능이 너무 편해요. 특히 모바일에서 다른 사이트는 광고 팝업창 때문에 짜증 났었는데, 여기 순위에 있는 곳들은 확실히 클린하고 쾌적하네요. 강추합니다!"
-                            </p>
-                            <div class="flex items-center gap-3 pt-5 border-t border-slate-100">
-                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary font-bold">이</div>
-                                <div>
-                                    <h4 class="font-bold text-dark text-sm">이*민</h4>
-                                    <p class="text-xs text-slate-500">모바일 접속자 • 2026. 08. 방문</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Review 3 -->
-                    <article class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative hover:-translate-y-1 transition-transform">
-                        <i class="fa-solid fa-quote-left text-4xl text-slate-100 absolute top-6 left-6"></i>
-                        <div class="relative z-10">
-                            <div class="flex text-yellow-400 text-sm mb-5">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="text-slate-700 font-medium leading-relaxed mb-8 h-32 overflow-hidden">
-                                "예능 프로 다시보기 하려고 매번 헤맸는데, 카테고리별 주소 모음이 따로 있어서 용도에 맞게 사이트 찾기가 너무 수월합니다. 앞으로도 좋은 관리 부탁드립니다."
-                            </p>
-                            <div class="flex items-center gap-3 pt-5 border-t border-slate-100">
-                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary font-bold">박</div>
-                                <div>
-                                    <h4 class="font-bold text-dark text-sm">박*진</h4>
-                                    <p class="text-xs text-slate-500">드라마 매니아 • 2026. 08. 방문</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog-preview" class="py-24 bg-white border-t border-slate-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
-                    <div>
-                        <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">TORRENT GUIDE & TIPS</h2>
-                        <h3 class="text-3xl font-bold text-dark mb-2">토렌트 꿀팁 & 최신 정보</h3>
-                        <p class="text-slate-600 font-medium">안전한 토렌트 사용법과 검증된 리뷰를 확인하세요.</p>
-                    </div>
-                    <a href="/blog" class="hidden md:inline-flex items-center gap-2 text-primary font-bold hover:text-blue-700 transition-colors bg-blue-50 hover:bg-blue-100 px-5 py-2.5 rounded-lg">
-                        블로그 전체보기 <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Blog Card 1 -->
-                    <a href="/blog/qbittorrent-optimization-guide" class="group block bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-primary/50 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="h-52 bg-slate-200 relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="qBittorrent 최적화 설정 가이드" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Guide'">
-                            <div class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm">사용법 가이드</div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold text-dark mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight">2026년판 qBittorrent 최적화 설정 방법 (속도 향상 및 보안)</h4>
-                            <p class="text-sm text-slate-500 mb-5 line-clamp-2 leading-relaxed">안전하고 빠른 토렌트 다운로드를 위한 qBittorrent 필수 설정법을 초보자 눈높이에 맞춰 상세히 알려드립니다.</p>
-                            <div class="text-xs text-slate-400 font-medium flex items-center gap-2">
-                                <i class="fa-regular fa-calendar"></i> 2026. 08. 12
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 2 -->
-                    <a href="/blog/safe-vpn-recommendations" class="group block bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-primary/50 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="h-52 bg-slate-200 relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=600&q=80" alt="안전한 VPN 추천" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=VPN'">
-                            <div class="absolute top-4 left-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm">보안 정보</div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold text-dark mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight">토렌트 이용 시 VPN이 필수인 이유와 추천 VPN Top 3</h4>
-                            <p class="text-sm text-slate-500 mb-5 line-clamp-2 leading-relaxed">개인정보 유출과 불법 트래픽 감청을 막아주는 가장 안전한 노로그(No-Log) VPN 서비스 3가지를 비교 분석합니다.</p>
-                            <div class="text-xs text-slate-400 font-medium flex items-center gap-2">
-                                <i class="fa-regular fa-calendar"></i> 2026. 08. 05
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Blog Card 3 -->
-                    <a href="/blog/fake-malware-sites-warning" class="group block bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-primary/50 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="h-52 bg-slate-200 relative overflow-hidden">
-                            <img src="/img/Gemini_Generated_Image_yeclr4yeclr4yecl.webp" alt="가짜 토렌트 사이트 구별법" class="w-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Warning'">
-                            <div class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm">주의 사항</div>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold text-dark mb-3 group-hover:text-primary transition-colors line-clamp-2 leading-tight">가짜 토렌트 사이트 구별법 및 악성코드 유포 유형 분석</h4>
-                            <p class="text-sm text-slate-500 mb-5 line-clamp-2 leading-relaxed">가짜 다운로드 버튼으로 랜섬웨어를 유포하는 불량 사이트들의 특징을 파악하고 안전하게 피하는 방법을 소개합니다.</p>
-                            <div class="text-xs text-slate-400 font-medium flex items-center gap-2">
-                                <i class="fa-regular fa-calendar"></i> 2026. 07. 28
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="mt-8 text-center md:hidden">
-                    <a href="/blog" class="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-700 transition-colors bg-blue-50 px-6 py-4 rounded-xl w-full justify-center shadow-sm">
-                        블로그 전체 게시글 보기 <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Static FAQ Section (No Toggles) -->
-        <section id="faq" class="bg-slate-50 border-t border-slate-200">
-        <section id="final-cta" class="py-16 bg-primary text-white text-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-blue-700/50 mix-blend-multiply"></div>
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <h2 class="text-3xl font-black mb-6">대한민국 1등 토렌트 모음 사이트!</h2>
-                <p class="mb-10 text-blue-100 text-lg font-medium">언제 접속해도 막힘없는 가장 빠르고 안전한 최신 주소를 지금 바로 확인하세요.</p>
-                <a href="https://trtxkorea.com" class="inline-flex items-center gap-2 bg-white text-primary text-xl font-bold py-4 px-12 rounded-full shadow-2xl hover:bg-slate-50 transition-all hover:scale-105">
-                    <i class="fa-solid fa-link"></i> 토렌트 주소 확인하기
+    <!-- [1] 최상단 툴바 -->
+    <div class="bg-white border-b border-slate-200 text-xs text-slate-600 py-1.5 px-4 z-50 relative">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <a href="https://t.me/gamza79" target="_blank" class="text-slate-600 hover:text-primary font-bold flex items-center gap-1">
+                    광고문의 텔레그램 : <strong class="text-primary">@gamza79</strong>
                 </a>
             </div>
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <button onclick="bookmarkSite()" class="hover:text-primary font-bold transition-colors flex items-center gap-1 hidden sm:flex">
+                    <i data-lucide="bookmark" class="w-3.5 h-3.5"></i> 즐겨찾기 (Ctrl+D)
+                </button>
+                <span class="text-slate-300 hidden sm:inline">|</span>
+                <!-- 회원가입/로그인 대체 -> 평생도메인 강조 -->
+                <a href="https://trtxkorea.com" class="flex items-center gap-1.5 bg-danger text-white px-3 py-1 rounded-full font-black text-[11px] sm:text-xs animate-pulse shadow-sm shadow-red-500/30 hover:bg-red-600 transition-colors">
+                    <i data-lucide="link" class="w-3 h-3"></i> 평생도메인 주소
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- [2] 헤더 (로고 + 통합검색) -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <!-- 메인 로고 -->
+            <div class="flex items-center justify-between w-full md:w-auto">
+                <a href="/" class="flex items-center gap-2.5 group">
+                    <div class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center font-black text-xl shadow-md group-hover:rotate-12 transition-transform">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-black tracking-tight text-slate-900 leading-none">
+                            토렌트<span class="text-primary">코리아</span>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-400 tracking-wider block mt-0.5">TORRENT KOREA</span>
+                    </div>
+                </a>
+                <!-- 모바일 메뉴 버튼 -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-700 hover:text-primary">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- 통합 검색 바 -->
+            <div class="w-full md:w-[450px]">
+                <form id="searchForm" class="relative flex items-center shadow-sm rounded-lg overflow-hidden border border-slate-300 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+                    <input type="text" id="searchInput" placeholder="검색어를 입력하세요" class="w-full bg-white text-sm text-slate-900 px-3 py-2.5 outline-none">
+                    <button type="submit" class="bg-slate-900 hover:bg-primary text-white px-5 py-2.5 transition-colors flex items-center justify-center">
+                        <i data-lucide="search" class="w-4 h-4"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- [3] 메인 네비게이션 (가로 스크롤) -->
+        <nav id="navBar" class="border-t border-slate-100 bg-white hidden md:block">
+            <div class="max-w-7xl mx-auto px-4">
+                <ul class="flex items-center space-x-1 sm:space-x-2 overflow-x-auto py-2.5 text-[13px] font-bold scrollbar-none whitespace-nowrap">
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-danger hover:bg-red-50 transition-colors">온라인영화</a></li>
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-slate-800 hover:text-primary hover:bg-slate-100 transition-colors">영화</a></li>
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-slate-800 hover:text-primary hover:bg-slate-100 transition-colors">넷플릭스</a></li>
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-slate-800 hover:text-primary hover:bg-slate-100 transition-colors">디즈니플러스</a></li>
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-slate-800 hover:text-primary hover:bg-slate-100 transition-colors">드라마</a></li>
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-slate-800 hover:text-primary hover:bg-slate-100 transition-colors">영상·음악</a></li>
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-danger hover:bg-red-50 transition-colors">한국야동</a></li>
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-slate-800 hover:text-primary hover:bg-slate-100 transition-colors">성인토렌트</a></li>
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-slate-800 hover:text-primary hover:bg-slate-100 transition-colors">성인갤러리</a></li>
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-slate-800 hover:text-primary hover:bg-slate-100 transition-colors">야설</a></li>
+                    <li><a href="#" class="px-3 py-1.5 rounded-md text-slate-800 hover:text-primary hover:bg-slate-100 transition-colors">애니·만화</a></li>
+                    <li><a href="https://onjusolink.com" target="_blank" class="px-3 py-1.5 rounded-md text-danger bg-red-50 hover:bg-red-100 transition-colors">온주소링크</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- [3-1] 모바일 전용 드롭다운 메뉴 (햄버거 클릭 시 토글) -->
+        <nav id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full left-0 top-full max-h-[70vh] overflow-y-auto">
+            <ul class="flex flex-col">
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-danger hover:bg-slate-50 transition-colors">온라인영화</a></li>
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-slate-800 hover:text-primary hover:bg-slate-50 transition-colors">영화</a></li>
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-slate-800 hover:text-primary hover:bg-slate-50 transition-colors">넷플릭스</a></li>
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-slate-800 hover:text-primary hover:bg-slate-50 transition-colors">디즈니플러스</a></li>
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-slate-800 hover:text-primary hover:bg-slate-50 transition-colors">드라마</a></li>
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-slate-800 hover:text-primary hover:bg-slate-50 transition-colors">영상·음악</a></li>
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-danger hover:bg-slate-50 transition-colors">한국야동</a></li>
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-slate-800 hover:text-primary hover:bg-slate-50 transition-colors">성인토렌트</a></li>
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-slate-800 hover:text-primary hover:bg-slate-50 transition-colors">성인갤러리</a></li>
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-slate-800 hover:text-primary hover:bg-slate-50 transition-colors">야설</a></li>
+                <li><a href="#" class="block px-5 py-3.5 border-b border-slate-50 text-[14px] font-bold text-slate-800 hover:text-primary hover:bg-slate-50 transition-colors">애니·만화</a></li>
+                <li><a href="https://onjusolink.com" target="_blank" class="block px-5 py-3.5 text-[14px] font-bold text-danger bg-red-50 hover:bg-red-100 transition-colors">온주소링크</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 w-full flex-1 pb-10 relative z-10">
+        
+        <!-- [4] 상단 12구 배너 그리드 (3열 x 4행) -->
+        <section class="mt-4 mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                <!-- 12개의 배너를 반복 생성 (실제 사용시 이미지 치환) -->
+                <script>
+                    for(let i=1; i<=12; i++) {
+                        document.write(`
+                        <a href="#" class="block bg-white border border-slate-200 rounded hover:border-primary overflow-hidden shadow-sm transition-all h-[50px] relative group">
+                            <img src="https://placehold.co/423x50/ffffff/cbd5e1?text=Sponsor+Banner+${i}" alt="상단배너${i}" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+                        </a>
+                        `);
+                    }
+                </script>
+            </div>
         </section>
+
+        <!-- [5] 메인 3단 레이아웃 컨테이너 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+
+            <!-- ===================== [좌측 컬럼 (3 cols)] ===================== -->
+            <aside class="lg:col-span-3 space-y-4">
+                
+                <!-- 최신 토렌트 TOP 20 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                    <div class="bg-slate-900 text-white p-3 flex items-center justify-between">
+                        <span class="font-bold text-[13px] flex items-center gap-1.5">
+                            <i data-lucide="clock" class="w-4 h-4 text-primary"></i> 최신 토렌트 TOP 20
+                        </span>
+                    </div>
+                    <ul class="p-2 space-y-1">
+                        <script>
+                            const latestData = ["오빠, 좀 더 깊이 들어가 봐", "쓰리썸 _슬렌더 흑두녀 [얼공]", "민증 올려놓고 박기", "김주하의 데이앤나잇 E40.720p", "유부녀 킬러 E10.1080p", "재벌X형사 2 E08.1080p", "포핸즈 E01.1080p", "PlumperPass 26.08.28 1080p", "JapanHDV 26.08.28 1080p", "JawBreakerz 26.08.21 1080p"];
+                            latestData.forEach((title, idx) => {
+                                document.write(`
+                                <li class="flex items-center gap-2 p-1.5 hover:bg-slate-50 rounded cursor-pointer group">
+                                    <span class="w-5 h-5 flex items-center justify-center ${idx < 3 ? 'bg-danger text-white' : 'bg-slate-100 text-slate-500'} font-bold rounded text-[10px] flex-none">${idx+1}</span>
+                                    <span class="text-[12px] text-slate-700 font-medium line-clamp-1 group-hover:text-primary">${title}</span>
+                                </li>
+                                `);
+                            });
+                        </script>
+                    </ul>
+                </div>
+
+                <!-- 인기 토렌트 TOP 20 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                    <div class="bg-slate-900 text-white p-3 flex items-center justify-between">
+                        <span class="font-bold text-[13px] flex items-center gap-1.5">
+                            <i data-lucide="trending-up" class="w-4 h-4 text-danger"></i> 인기 토렌트 TOP 20
+                        </span>
+                    </div>
+                    <ul class="p-2 space-y-1">
+                        <script>
+                            const popularData = ["06년생 레전드", "공순이 연구", "[신작-추가] 04년생 민이 (직촬)", "인천 주나래 12V.17P 풀팩", "S2COUPLE 기존자료 + 추가 영상", "국산 청순한 외모 여대생", "국산 VVIP 하이퍼클래스 아재 조건", "친구가 보내준 여친 영상", "탱주 인스타 구매 영상", "활발한 오르가즘을 경험하는 여성"];
+                            popularData.forEach((title, idx) => {
+                                document.write(`
+                                <li class="flex items-center gap-2 p-1.5 hover:bg-slate-50 rounded cursor-pointer group">
+                                    <span class="w-5 h-5 flex items-center justify-center ${idx < 3 ? 'bg-primary text-white' : 'bg-slate-100 text-slate-500'} font-bold rounded text-[10px] flex-none">${idx+1}</span>
+                                    <span class="text-[12px] text-slate-700 font-medium line-clamp-1 group-hover:text-primary">${title}</span>
+                                </li>
+                                `);
+                            });
+                        </script>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- ===================== [중앙 컬럼 (6 cols)] ===================== -->
+            <section class="lg:col-span-6 space-y-5">
+                
+                <!-- 중앙 분할 배너 2구 -->
+                <div class="grid grid-cols-2 gap-2">
+                    <a href="#" class="block bg-white border border-slate-200 rounded overflow-hidden shadow-sm h-[60px]">
+                        <img src="https://placehold.co/400x60/ffffff/cbd5e1?text=Center+Banner+1" class="w-full h-full object-cover">
+                    </a>
+                    <a href="#" class="block bg-white border border-slate-200 rounded overflow-hidden shadow-sm h-[60px]">
+                        <img src="https://placehold.co/400x60/ffffff/cbd5e1?text=Center+Banner+2" class="w-full h-full object-cover">
+                    </a>
+                </div>
+
+                <!-- 가로 롤링 슬라이더 모듈 1: 최신영화 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-3">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-bold text-sm text-slate-900">최신영화</h3>
+                        <div class="flex gap-1">
+                            <button onclick="scrollSlider('slider1', -150)" class="w-6 h-6 rounded bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><i data-lucide="chevron-left" class="w-4 h-4 text-slate-600"></i></button>
+                            <button onclick="scrollSlider('slider1', 150)" class="w-6 h-6 rounded bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><i data-lucide="chevron-right" class="w-4 h-4 text-slate-600"></i></button>
+                        </div>
+                    </div>
+                    <div id="slider1" class="flex gap-2 overflow-x-auto scrollbar-none scroll-smooth pb-2">
+                        <script>
+                            for(let i=1; i<=8; i++){
+                                document.write(`
+                                <a href="#" class="flex-none w-[106px] group">
+                                    <div class="h-[135px] rounded overflow-hidden bg-slate-100 mb-1.5 relative border border-slate-200 group-hover:border-primary transition-colors">
+                                        <img src="https://placehold.co/106x135/e2e8f0/94a3b8?text=Movie+${i}" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                            <i data-lucide="play-circle" class="w-8 h-8 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-[11px] font-medium text-slate-700 line-clamp-1 group-hover:text-primary text-center">최신영화 타이틀 ${i}</p>
+                                </a>
+                                `);
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- 가로 롤링 슬라이더 모듈 2: 추천드라마 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-3">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-bold text-sm text-slate-900">추천드라마</h3>
+                        <div class="flex gap-1">
+                            <button onclick="scrollSlider('slider2', -150)" class="w-6 h-6 rounded bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><i data-lucide="chevron-left" class="w-4 h-4 text-slate-600"></i></button>
+                            <button onclick="scrollSlider('slider2', 150)" class="w-6 h-6 rounded bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><i data-lucide="chevron-right" class="w-4 h-4 text-slate-600"></i></button>
+                        </div>
+                    </div>
+                    <div id="slider2" class="flex gap-2 overflow-x-auto scrollbar-none scroll-smooth pb-2">
+                        <script>
+                            for(let i=1; i<=8; i++){
+                                document.write(`
+                                <a href="#" class="flex-none w-[106px] group">
+                                    <div class="h-[135px] rounded overflow-hidden bg-slate-100 mb-1.5 relative border border-slate-200 group-hover:border-primary transition-colors">
+                                        <img src="https://placehold.co/106x135/e2e8f0/94a3b8?text=Drama+${i}" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                            <i data-lucide="play-circle" class="w-8 h-8 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-[11px] font-medium text-slate-700 line-clamp-1 group-hover:text-primary text-center">인기드라마 제목 ${i}</p>
+                                </a>
+                                `);
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- 각 카테고리별 텍스트 게시판 그리드 (2단) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    
+                    <script>
+                        const categories = [
+                            {title: "온라인영화", color: "text-danger"}, {title: "영화", color: "text-slate-900"}, 
+                            {title: "넷플릭스", color: "text-danger"}, {title: "디즈니플러스", color: "text-primary"}, 
+                            {title: "드라마", color: "text-slate-900"}, {title: "영상·음악", color: "text-slate-900"}, 
+                            {title: "한국야동", color: "text-danger"}, {title: "성인토렌트", color: "text-danger"}, 
+                            {title: "성인갤러리", color: "text-slate-900"}, {title: "야설", color: "text-slate-900"}, 
+                            {title: "애니·만화", color: "text-slate-900"}
+                        ];
+
+                        categories.forEach(cat => {
+                            document.write(`
+                            <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-3">
+                                <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
+                                    <a href="#" class="font-bold text-[13px] ${cat.color} hover:underline">${cat.title}</a>
+                                    <a href="#" class="text-slate-400 hover:text-primary"><i data-lucide="plus" class="w-4 h-4"></i></a>
+                                </div>
+                                <ul class="space-y-1.5">
+                                    <li class="flex justify-between items-center text-[12px] group cursor-pointer">
+                                        <div class="flex items-center gap-1.5 overflow-hidden">
+                                            <span class="text-slate-400 font-bold text-[10px]">1</span>
+                                            <span class="text-slate-700 group-hover:text-primary font-medium line-clamp-1 truncate">샘플 게시글 제목입니다 1</span>
+                                        </div>
+                                        <span class="text-slate-400 text-[10px] whitespace-nowrap ml-2">08.29</span>
+                                    </li>
+                                    <li class="flex justify-between items-center text-[12px] group cursor-pointer">
+                                        <div class="flex items-center gap-1.5 overflow-hidden">
+                                            <span class="text-slate-400 font-bold text-[10px]">2</span>
+                                            <span class="text-slate-700 group-hover:text-primary font-medium line-clamp-1 truncate">샘플 게시글 제목입니다 2 (고화질)</span>
+                                        </div>
+                                        <span class="text-slate-400 text-[10px] whitespace-nowrap ml-2">08.28</span>
+                                    </li>
+                                    <li class="flex justify-between items-center text-[12px] group cursor-pointer">
+                                        <div class="flex items-center gap-1.5 overflow-hidden">
+                                            <span class="text-slate-400 font-bold text-[10px]">3</span>
+                                            <span class="text-slate-700 group-hover:text-primary font-medium line-clamp-1 truncate">샘플 게시글 제목 3 완결팩</span>
+                                        </div>
+                                        <span class="text-slate-400 text-[10px] whitespace-nowrap ml-2">08.27</span>
+                                    </li>
+                                    <li class="flex justify-between items-center text-[12px] group cursor-pointer">
+                                        <div class="flex items-center gap-1.5 overflow-hidden">
+                                            <span class="text-slate-400 font-bold text-[10px]">4</span>
+                                            <span class="text-slate-700 group-hover:text-primary font-medium line-clamp-1 truncate">샘플 제목 4 1080p HEVC</span>
+                                        </div>
+                                        <span class="text-slate-400 text-[10px] whitespace-nowrap ml-2">08.26</span>
+                                    </li>
+                                    <li class="flex justify-between items-center text-[12px] group cursor-pointer">
+                                        <div class="flex items-center gap-1.5 overflow-hidden">
+                                            <span class="text-slate-400 font-bold text-[10px]">5</span>
+                                            <span class="text-slate-700 group-hover:text-primary font-medium line-clamp-1 truncate">샘플 5 KOREAN.WEB-DL</span>
+                                        </div>
+                                        <span class="text-slate-400 text-[10px] whitespace-nowrap ml-2">08.25</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            `);
+                        });
+                    </script>
+                </div>
+            </section>
+
+            <!-- ===================== [우측 컬럼 (3 cols)] ===================== -->
+            <aside class="lg:col-span-3 space-y-4">
+                
+                <!-- 성인 TOP 5 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                    <div class="bg-slate-50 border-b border-slate-100 p-3 flex items-center justify-between">
+                        <span class="font-bold text-[13px] text-slate-800">성인 TOP 5</span>
+                        <a href="#" class="text-slate-400 hover:text-primary"><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+                    <ul class="p-2 space-y-1">
+                        <script>
+                            const adultData = ["FC2-PPV-4949214 완전얼굴공개 신입OL", "FC2-PPV-4948791 슬렌더 바디", "一本道 희망 미리의 밀착 요가", "모델 겸 인플루언서 그녀와", "카리비안컴 비일상적인 고급호텔"];
+                            adultData.forEach((title, idx) => {
+                                document.write(`
+                                <li class="flex items-center justify-between p-1.5 hover:bg-slate-50 rounded cursor-pointer group">
+                                    <div class="flex items-center gap-2 overflow-hidden">
+                                        <span class="text-slate-400 font-bold text-[10px] flex-none">${idx+1}</span>
+                                        <span class="text-[12px] text-slate-700 font-medium line-clamp-1 group-hover:text-primary">${title}</span>
+                                    </div>
+                                </li>
+                                `);
+                            });
+                        </script>
+                    </ul>
+                </div>
+
+                <!-- 야설 TOP 5 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                    <div class="bg-slate-50 border-b border-slate-100 p-3 flex items-center justify-between">
+                        <span class="font-bold text-[13px] text-slate-800">야설 TOP 5</span>
+                        <a href="#" class="text-slate-400 hover:text-primary"><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+                    <ul class="p-2 space-y-1">
+                        <script>
+                            const novelData = ["이런 경험 제가 처음 인가요??", "특별한 경험 (실화)", "부적절한 관계", "여행 후 관계", "이혼한 누나"];
+                            novelData.forEach((title, idx) => {
+                                document.write(`
+                                <li class="flex items-center justify-between p-1.5 hover:bg-slate-50 rounded cursor-pointer group">
+                                    <div class="flex items-center gap-2 overflow-hidden">
+                                        <span class="text-slate-400 font-bold text-[10px] flex-none">${idx+1}</span>
+                                        <span class="text-[12px] text-slate-700 font-medium line-clamp-1 group-hover:text-primary">${title}</span>
+                                    </div>
+                                </li>
+                                `);
+                            });
+                        </script>
+                    </ul>
+                </div>
+
+                <!-- 우측 세로 배너 스택 (4개) -->
+                <div class="space-y-2 pt-2">
+                    <script>
+                        for(let i=1; i<=4; i++) {
+                            document.write(`
+                            <a href="#" class="block bg-white border border-slate-200 rounded overflow-hidden shadow-sm hover:border-primary transition-all relative group">
+                                <img src="https://placehold.co/290x65/ffffff/cbd5e1?text=Right+Banner+${i}" alt="우측배너${i}" class="w-full h-auto object-cover">
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+                            </a>
+                            `);
+                        }
+                    </script>
+                </div>
+
+                <!-- 공지사항 박스 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden mt-4">
+                    <div class="bg-slate-900 text-white p-3 font-bold text-[13px]">공지사항</div>
+                    <ul class="p-3 text-[12px] text-slate-700 space-y-2">
+                        <li class="flex justify-between items-center group cursor-pointer">
+                            <span class="font-medium group-hover:text-primary line-clamp-1"><strong class="font-black mr-1 text-primary">·</strong> 차단 우회 및 공식 도메인 안내</span>
+                            <span class="text-[10px] text-slate-400 ml-2">08-23</span>
+                        </li>
+                        <li class="flex justify-between items-center group cursor-pointer">
+                            <span class="font-medium group-hover:text-primary line-clamp-1"><strong class="font-black mr-1 text-primary">·</strong> 사이트 접속 불량 시 해결방법</span>
+                            <span class="text-[10px] text-slate-400 ml-2">08-07</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
     </main>
 
-    <!-- Semantic Footer -->
-    <footer class="bg-dark text-slate-400 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
-                <div class="md:col-span-5">
-                    <div class="flex items-center gap-2 mb-6 text-white">
-                        <i class="fa-solid fa-bolt text-primary text-2xl"></i>
-                        <span class="font-black text-2xl tracking-tight">토렌트 <span class="text-primary">코리아</span></span>
-                    </div>
-                    <p class="text-sm leading-relaxed mb-4 pr-4">
-                        대한민국 파일 공유 정보 포털 토렌트 코리아. 검증된 토렌트 사이트 순위 정보 및 유익한 디지털 컨텐츠 마그넷 정보 메타 센터입니다.
-                    </p>
-                    <p class="text-sm font-bold text-slate-300">
-                        공식 도메인: <a href="https://trtxkorea.com" class="text-primary hover:underline">trtxkorea.com</a>
-                    </p>
-                </div>
-                
-                <div class="md:col-span-3 md:col-start-7">
-                    <h5 class="text-white font-bold mb-4">주요 카테고리</h5>
-                    <ul class="space-y-3 text-sm font-medium">
-                        <li><a href="#" class="hover:text-primary transition">최신 영화 토렌트 순위</a></li>
-                        <li><a href="#" class="hover:text-primary transition">드라마/예능 파일공유 추천</a></li>
-                        <li><a href="#" class="hover:text-primary transition">유틸리티 프로그램 정보</a></li>
-                    </ul>
-                </div>
-                
-                <div class="md:col-span-3">
-                    <h5 class="text-white font-bold mb-4">고객지원 & 정보</h5>
-                    <ul class="space-y-3 text-sm font-medium">
-                        <li><a href="/blog" class="hover:text-primary transition">토렌트 꿀팁 블로그</a></li>
-                        <li><a href="#faq" class="hover:text-primary transition">자주 묻는 질문 (FAQ)</a></li>
-                        <li><a href="#" class="hover:text-primary transition">DMCA / 저작권 문의</a></li>
-                    </ul>
-                </div>
+    <!-- [6] 푸터 -->
+    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+            <div class="flex flex-col sm:flex-row items-center gap-4 text-center md:text-left">
+                <span class="font-black text-white text-base tracking-tight flex items-center gap-1">
+                    <i data-lucide="zap" class="w-4 h-4 text-primary"></i> TORRENT KOREA
+                </span>
+                <span class="hidden sm:inline text-slate-700">|</span>
+                <a href="https://t.me/gamza79" target="_blank" class="hover:text-white transition-colors">광고문의 텔레그램 : @gamza79</a>
             </div>
-            
-            <div class="border-t border-slate-800 pt-8 mt-8">
-                <h6 class="text-white font-bold mb-3 text-sm">[면책 조항 / Legal Disclaimer]</h6>
-                <p class="text-xs leading-relaxed text-slate-500 mb-6 text-justify">
-                    토렌트 코리아 (trtxkorea.com) 메타 안내 랜딩 페이지는 웹상에 공개적으로 돌아다니는 정보(하이퍼링크 및 URL)를 수집하여 제공하는 링크 모음 사이트 및 파일 공유 정보 포털입니다. 본 웹 서버에는 저작권의 보호를 받는 어떠한 불법적인 미디어 파일, 영상, 파일 조각, 시드(Seed) 파일 혹은 토렌트 파일(.torrent)도 직접 호스팅하거나 업로드/배포하지 않으며 모든 링크는 외부 웹사이트의 메타 데이터 정보 연결만을 제공합니다. 링크된 타 사이트에서 발생하는 저작권 침해 등 모든 법적 책임은 해당 사이트 운영자 및 사용자 본인에게 있으며, 토렌트 코리아는 이에 대해 어떠한 민/형사상 법적 책임도 지지 않음을 명시합니다. 불법 자료의 공유 및 유포는 관련 법령에 의거하여 처벌받을 수 있습니다.
-                </p>
-                <div class="flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-6">
-                    <p>© 2026 토렌트 코리아 (Torrent Korea). All rights reserved.</p>
-                    <p class="mt-2 md:mt-0">Contact: admin@trtxkorea.com</p>
-                </div>
+            <div class="text-slate-500 text-center md:text-right">
+                Copyright © TORRENT KOREA / 토렌트 코리아 All rights reserved.
             </div>
         </div>
     </footer>
 
-    <!-- Scripts for Interactivity -->
+    <!-- 모바일 메뉴 및 슬라이더 스크립트 -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Mobile Menu Toggle Logic
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
+        lucide.createIcons();
 
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Close mobile menu when a link is clicked
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-
-            // Sticky Header Visual Change on Scroll
-            const header = document.getElementById('main-nav');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) {
-                    header.classList.add('shadow-md');
-                    header.classList.remove('border-b');
+        // 즐겨찾기 스크립트 (기존 제공 소스 로직 모방)
+        function bookmarkSite() {
+            var bookmarkURL = window.location.href;
+            var bookmarkTitle = document.title;
+            try {
+                if (window.sidebar && window.sidebar.addPanel) {
+                    window.sidebar.addPanel(bookmarkTitle, bookmarkURL, '');
+                } else if (window.external && ('AddFavorite' in window.external)) {
+                    window.external.AddFavorite(bookmarkURL, bookmarkTitle);
                 } else {
-                    header.classList.remove('shadow-md');
-                    header.classList.add('border-b');
+                    alert((navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Cmd' : 'Ctrl') + '+D 키를 눌러 즐겨찾기에 등록하실 수 있습니다.');
                 }
-            });
+            } catch (e) {
+                alert('브라우저 단축키 (Ctrl+D 또는 Cmd+D)를 사용하여 즐겨찾기에 추가해주세요.');
+            }
+        }
+
+        // 가로 슬라이더 좌우 버튼 로직
+        function scrollSlider(id, amount) {
+            const container = document.getElementById(id);
+            if(container) {
+                container.scrollBy({ left: amount, behavior: 'smooth' });
+            }
+        }
+
+        // 모바일 메뉴 토글
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
         });
+
+        // 팝업 닫기 로직
+        const popup = document.getElementById('revampPopup');
+        const closeBtn = document.getElementById('closePopupBtn');
+        const closeIcon = document.getElementById('closePopupIcon');
+
+        function closePopup() {
+            if(popup) {
+                popup.style.opacity = '0';
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                }, 300);
+            }
+        }
+
+        if(closeBtn) closeBtn.addEventListener('click', closePopup);
+        if(closeIcon) closeIcon.addEventListener('click', closePopup);
     </script>
 </body>
 </html>
-
-
-
