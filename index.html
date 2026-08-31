@@ -208,17 +208,17 @@
         
         <!-- [4] 상단 3구 배너 그리드 (3열 x 1행) -->
         <section class="mt-4 mb-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+            <div id="topBannerContainer" class="grid grid-cols-2 md:grid-cols-3 gap-2">
                 <!-- 3개의 지정된 배너 이미지 -->
-                <a href="#" class="block bg-white border border-slate-200 rounded hover:border-primary overflow-hidden shadow-sm transition-all  relative group">
+                <a href="#" class="block bg-white border border-slate-200 rounded hover:border-primary overflow-hidden shadow-sm transition-all h-[50px] relative group">
                     <img src="/img/Gemini_Generated_Image_4lklx84lklx84lkl.webp" alt="상단배너1" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
                 </a>
-                <a href="#" class="block bg-white border border-slate-200 rounded hover:border-primary overflow-hidden shadow-sm transition-all  relative group">
+                <a href="#" class="block bg-white border border-slate-200 rounded hover:border-primary overflow-hidden shadow-sm transition-all h-[50px] relative group">
                     <img src="/img/Gemini_Generated_Image_a3jrera3jrera3jr.webp" alt="상단배너2" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
                 </a>
-                <a href="#" class="block bg-white border border-slate-200 rounded hover:border-primary overflow-hidden shadow-sm transition-all  relative group">
+                <a href="#" class="block bg-white border border-slate-200 rounded hover:border-primary overflow-hidden shadow-sm transition-all h-[50px] relative group">
                     <img src="/img/Gemini_Generated_Image_o7cvyvo7cvyvo7cv.webp" alt="상단배너3" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
                 </a>
@@ -558,6 +558,18 @@
 
         if(closeBtn) closeBtn.addEventListener('click', closePopup);
         if(closeIcon) closeIcon.addEventListener('click', closePopup);
+
+        // 상단 배너 랜덤 배치 로직
+        document.addEventListener("DOMContentLoaded", function() {
+            const bannerContainer = document.getElementById('topBannerContainer');
+            if (bannerContainer) {
+                const banners = Array.from(bannerContainer.children);
+                // 배열 무작위 섞기
+                banners.sort(() => Math.random() - 0.5);
+                // 섞인 순서대로 DOM에 다시 삽입
+                banners.forEach(banner => bannerContainer.appendChild(banner));
+            }
+        });
     </script>
 </body>
 </html>
