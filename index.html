@@ -55,7 +55,7 @@
           "url": "https://trtxkorea.com/",
           "name": "토렌트 코리아",
           "description": "대한민국 1등 미디어 & 파일 인덱스 포털",
-          "datePublished": "2024-01-01T00:00:00+09:00",
+          "datePublished": "2026-05-01T00:00:00+09:00",
           "dateModified": "2026-08-31T15:00:00+09:00",
           "potentialAction": {
             "@type": "SearchAction",
@@ -124,7 +124,7 @@
                 </button>
                 <span class="text-slate-300 hidden sm:inline">|</span>
                 <!-- 회원가입/로그인 대체 -> 평생도메인 강조 -->
-                <a href="https://torrentkorea.isweb.co.kr" class="flex items-center gap-1.5 bg-danger text-white px-3 py-1 rounded-full font-black text-[11px] sm:text-xs animate-pulse shadow-sm shadow-red-500/30 hover:bg-red-600 transition-colors">
+                <a href="http://torrentkorea.isweb.co.kr" target="_blank" class="flex items-center gap-1.5 bg-danger text-white px-3 py-1 rounded-full font-black text-[11px] sm:text-xs animate-pulse shadow-sm shadow-red-500/30 hover:bg-red-600 transition-colors">
                     <i data-lucide="link" class="w-3 h-3"></i> 평생도메인 주소
                 </a>
             </div>
@@ -206,9 +206,10 @@
 
     <main class="max-w-7xl mx-auto px-4 w-full flex-1 pb-10 relative z-10">
         
-        <!-- [4] 상단 3구 배너 그리드 -->
+        <!-- [4] 상단 3구 배너 그리드 (3열 x 1행) -->
         <section class="mt-4 mb-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                <!-- 3개의 지정된 배너 이미지 -->
                 <a href="#" class="block bg-white border border-slate-200 rounded hover:border-primary overflow-hidden shadow-sm transition-all h-[50px] relative group">
                     <img src="/img/Gemini_Generated_Image_4lklx84lklx84lkl.webp" alt="상단배너1" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
@@ -250,21 +251,228 @@
                             });
                         </script>
                     </ul>
-            </div>
+                </div>
 
-            <!-- 우측 세로 배너 스택 (2개) -->
-            <div class="space-y-2 pt-2">
-                <a href="#" class="block bg-white border border-slate-200 rounded overflow-hidden shadow-sm hover:border-primary transition-all relative group">
-                    <img src="https://placehold.co/290x65/ffffff/cbd5e1?text=Right+Banner+1" alt="우측배너1" class="w-full h-auto object-cover">
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
-                </a>
-                <a href="#" class="block bg-white border border-slate-200 rounded overflow-hidden shadow-sm hover:border-primary transition-all relative group">
-                    <img src="https://placehold.co/290x65/ffffff/cbd5e1?text=Right+Banner+2" alt="우측배너2" class="w-full h-auto object-cover">
-                    <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
-                </a>
-            </div>
+                <!-- 인기 토렌트 TOP 20 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                    <div class="bg-slate-900 text-white p-3 flex items-center justify-between">
+                        <span class="font-bold text-[13px] flex items-center gap-1.5">
+                            <i data-lucide="trending-up" class="w-4 h-4 text-danger"></i> 인기 토렌트 TOP 20
+                        </span>
+                    </div>
+                    <ul class="p-2 space-y-1">
+                        <script>
+                            const popularData = ["06년생 레전드", "공순이 연구", "[신작-추가] 04년생 민이 (직촬)", "인천 주나래 12V.17P 풀팩", "S2COUPLE 기존자료 + 추가 영상", "국산 청순한 외모 여대생", "국산 VVIP 하이퍼클래스 아재 조건", "친구가 보내준 여친 영상", "탱주 인스타 구매 영상", "활발한 오르가즘을 경험하는 여성"];
+                            popularData.forEach((title, idx) => {
+                                document.write(`
+                                <li class="flex items-center gap-2 p-1.5 hover:bg-slate-50 rounded cursor-pointer group">
+                                    <span class="w-5 h-5 flex items-center justify-center ${idx < 3 ? 'bg-primary text-white' : 'bg-slate-100 text-slate-500'} font-bold rounded text-[10px] flex-none">${idx+1}</span>
+                                    <span class="text-[12px] text-slate-700 font-medium line-clamp-1 group-hover:text-primary">${title}</span>
+                                </li>
+                                `);
+                            });
+                        </script>
+                    </ul>
+                </div>
+            </aside>
 
-            <!-- 공지사항 박스 -->
+            <!-- ===================== [중앙 컬럼 (6 cols)] ===================== -->
+            <section class="lg:col-span-6 space-y-5">
+                
+                <!-- 중앙 분할 배너 2구 -->
+                <div class="grid grid-cols-2 gap-2">
+                    <a href="#" class="block bg-white border border-slate-200 rounded overflow-hidden shadow-sm h-[60px]">
+                        <img src="https://placehold.co/400x60/ffffff/cbd5e1?text=Center+Banner+1" class="w-full h-full object-cover">
+                    </a>
+                    <a href="#" class="block bg-white border border-slate-200 rounded overflow-hidden shadow-sm h-[60px]">
+                        <img src="https://placehold.co/400x60/ffffff/cbd5e1?text=Center+Banner+2" class="w-full h-full object-cover">
+                    </a>
+                </div>
+
+                <!-- 가로 롤링 슬라이더 모듈 1: 최신영화 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-3">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-bold text-sm text-slate-900">최신영화</h3>
+                        <div class="flex gap-1">
+                            <button onclick="scrollSlider('slider1', -150)" class="w-6 h-6 rounded bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><i data-lucide="chevron-left" class="w-4 h-4 text-slate-600"></i></button>
+                            <button onclick="scrollSlider('slider1', 150)" class="w-6 h-6 rounded bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><i data-lucide="chevron-right" class="w-4 h-4 text-slate-600"></i></button>
+                        </div>
+                    </div>
+                    <div id="slider1" class="flex gap-2 overflow-x-auto scrollbar-none scroll-smooth pb-2">
+                        <script>
+                            for(let i=1; i<=8; i++){
+                                document.write(`
+                                <a href="#" class="flex-none w-[106px] group">
+                                    <div class="h-[135px] rounded overflow-hidden bg-slate-100 mb-1.5 relative border border-slate-200 group-hover:border-primary transition-colors">
+                                        <img src="https://placehold.co/106x135/e2e8f0/94a3b8?text=Movie+${i}" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                            <i data-lucide="play-circle" class="w-8 h-8 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-[11px] font-medium text-slate-700 line-clamp-1 group-hover:text-primary text-center">최신영화 타이틀 ${i}</p>
+                                </a>
+                                `);
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- 가로 롤링 슬라이더 모듈 2: 추천드라마 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-3">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-bold text-sm text-slate-900">추천드라마</h3>
+                        <div class="flex gap-1">
+                            <button onclick="scrollSlider('slider2', -150)" class="w-6 h-6 rounded bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><i data-lucide="chevron-left" class="w-4 h-4 text-slate-600"></i></button>
+                            <button onclick="scrollSlider('slider2', 150)" class="w-6 h-6 rounded bg-slate-100 hover:bg-slate-200 flex items-center justify-center"><i data-lucide="chevron-right" class="w-4 h-4 text-slate-600"></i></button>
+                        </div>
+                    </div>
+                    <div id="slider2" class="flex gap-2 overflow-x-auto scrollbar-none scroll-smooth pb-2">
+                        <script>
+                            for(let i=1; i<=8; i++){
+                                document.write(`
+                                <a href="#" class="flex-none w-[106px] group">
+                                    <div class="h-[135px] rounded overflow-hidden bg-slate-100 mb-1.5 relative border border-slate-200 group-hover:border-primary transition-colors">
+                                        <img src="https://placehold.co/106x135/e2e8f0/94a3b8?text=Drama+${i}" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                            <i data-lucide="play-circle" class="w-8 h-8 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-[11px] font-medium text-slate-700 line-clamp-1 group-hover:text-primary text-center">인기드라마 제목 ${i}</p>
+                                </a>
+                                `);
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- 각 카테고리별 텍스트 게시판 그리드 (2단) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    
+                    <script>
+                        const categories = [
+                            {title: "온라인영화", color: "text-danger"}, {title: "영화", color: "text-slate-900"}, 
+                            {title: "넷플릭스", color: "text-danger"}, {title: "디즈니플러스", color: "text-primary"}, 
+                            {title: "드라마", color: "text-slate-900"}, {title: "영상·음악", color: "text-slate-900"}, 
+                            {title: "한국야동", color: "text-danger"}, {title: "성인토렌트", color: "text-danger"}, 
+                            {title: "성인갤러리", color: "text-slate-900"}, {title: "야설", color: "text-slate-900"}, 
+                            {title: "애니·만화", color: "text-slate-900"}
+                        ];
+
+                        categories.forEach(cat => {
+                            document.write(`
+                            <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-3">
+                                <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
+                                    <a href="#" class="font-bold text-[13px] ${cat.color} hover:underline">${cat.title}</a>
+                                    <a href="#" class="text-slate-400 hover:text-primary"><i data-lucide="plus" class="w-4 h-4"></i></a>
+                                </div>
+                                <ul class="space-y-1.5">
+                                    <li class="flex justify-between items-center text-[12px] group cursor-pointer">
+                                        <div class="flex items-center gap-1.5 overflow-hidden">
+                                            <span class="text-slate-400 font-bold text-[10px]">1</span>
+                                            <span class="text-slate-700 group-hover:text-primary font-medium line-clamp-1 truncate">샘플 게시글 제목입니다 1</span>
+                                        </div>
+                                        <span class="text-slate-400 text-[10px] whitespace-nowrap ml-2">08.29</span>
+                                    </li>
+                                    <li class="flex justify-between items-center text-[12px] group cursor-pointer">
+                                        <div class="flex items-center gap-1.5 overflow-hidden">
+                                            <span class="text-slate-400 font-bold text-[10px]">2</span>
+                                            <span class="text-slate-700 group-hover:text-primary font-medium line-clamp-1 truncate">샘플 게시글 제목입니다 2 (고화질)</span>
+                                        </div>
+                                        <span class="text-slate-400 text-[10px] whitespace-nowrap ml-2">08.28</span>
+                                    </li>
+                                    <li class="flex justify-between items-center text-[12px] group cursor-pointer">
+                                        <div class="flex items-center gap-1.5 overflow-hidden">
+                                            <span class="text-slate-400 font-bold text-[10px]">3</span>
+                                            <span class="text-slate-700 group-hover:text-primary font-medium line-clamp-1 truncate">샘플 게시글 제목 3 완결팩</span>
+                                        </div>
+                                        <span class="text-slate-400 text-[10px] whitespace-nowrap ml-2">08.27</span>
+                                    </li>
+                                    <li class="flex justify-between items-center text-[12px] group cursor-pointer">
+                                        <div class="flex items-center gap-1.5 overflow-hidden">
+                                            <span class="text-slate-400 font-bold text-[10px]">4</span>
+                                            <span class="text-slate-700 group-hover:text-primary font-medium line-clamp-1 truncate">샘플 제목 4 1080p HEVC</span>
+                                        </div>
+                                        <span class="text-slate-400 text-[10px] whitespace-nowrap ml-2">08.26</span>
+                                    </li>
+                                    <li class="flex justify-between items-center text-[12px] group cursor-pointer">
+                                        <div class="flex items-center gap-1.5 overflow-hidden">
+                                            <span class="text-slate-400 font-bold text-[10px]">5</span>
+                                            <span class="text-slate-700 group-hover:text-primary font-medium line-clamp-1 truncate">샘플 5 KOREAN.WEB-DL</span>
+                                        </div>
+                                        <span class="text-slate-400 text-[10px] whitespace-nowrap ml-2">08.25</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            `);
+                        });
+                    </script>
+                </div>
+            </section>
+
+            <!-- ===================== [우측 컬럼 (3 cols)] ===================== -->
+            <aside class="lg:col-span-3 space-y-4">
+                
+                <!-- 성인 TOP 5 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                    <div class="bg-slate-50 border-b border-slate-100 p-3 flex items-center justify-between">
+                        <span class="font-bold text-[13px] text-slate-800">성인 TOP 5</span>
+                        <a href="#" class="text-slate-400 hover:text-primary"><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+                    <ul class="p-2 space-y-1">
+                        <script>
+                            const adultData = ["FC2-PPV-4949214 완전얼굴공개 신입OL", "FC2-PPV-4948791 슬렌더 바디", "一本道 희망 미리의 밀착 요가", "모델 겸 인플루언서 그녀와", "카리비안컴 비일상적인 고급호텔"];
+                            adultData.forEach((title, idx) => {
+                                document.write(`
+                                <li class="flex items-center justify-between p-1.5 hover:bg-slate-50 rounded cursor-pointer group">
+                                    <div class="flex items-center gap-2 overflow-hidden">
+                                        <span class="text-slate-400 font-bold text-[10px] flex-none">${idx+1}</span>
+                                        <span class="text-[12px] text-slate-700 font-medium line-clamp-1 group-hover:text-primary">${title}</span>
+                                    </div>
+                                </li>
+                                `);
+                            });
+                        </script>
+                    </ul>
+                </div>
+
+                <!-- 야설 TOP 5 -->
+                <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                    <div class="bg-slate-50 border-b border-slate-100 p-3 flex items-center justify-between">
+                        <span class="font-bold text-[13px] text-slate-800">야설 TOP 5</span>
+                        <a href="#" class="text-slate-400 hover:text-primary"><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+                    <ul class="p-2 space-y-1">
+                        <script>
+                            const novelData = ["이런 경험 제가 처음 인가요??", "특별한 경험 (실화)", "부적절한 관계", "여행 후 관계", "이혼한 누나"];
+                            novelData.forEach((title, idx) => {
+                                document.write(`
+                                <li class="flex items-center justify-between p-1.5 hover:bg-slate-50 rounded cursor-pointer group">
+                                    <div class="flex items-center gap-2 overflow-hidden">
+                                        <span class="text-slate-400 font-bold text-[10px] flex-none">${idx+1}</span>
+                                        <span class="text-[12px] text-slate-700 font-medium line-clamp-1 group-hover:text-primary">${title}</span>
+                                    </div>
+                                </li>
+                                `);
+                            });
+                        </script>
+                    </ul>
+                </div>
+
+                <!-- 우측 세로 배너 스택 (2개) -->
+                <div class="space-y-2 pt-2">
+                    <script>
+                        for(let i=1; i<=2; i++) {
+                            document.write(`
+                            <a href="#" class="block bg-white border border-slate-200 rounded overflow-hidden shadow-sm hover:border-primary transition-all relative group">
+                                <img src="https://placehold.co/290x65/ffffff/cbd5e1?text=Right+Banner+${i}" alt="우측배너${i}" class="w-full h-auto object-cover">
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+                            </a>
+                            `);
+                        }
+                    </script>
+                </div>
+
+                <!-- 공지사항 박스 -->
                 <div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden mt-4">
                     <div class="bg-slate-900 text-white p-3 font-bold text-[13px]">공지사항</div>
                     <ul class="p-3 text-[12px] text-slate-700 space-y-2">
